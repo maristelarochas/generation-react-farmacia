@@ -5,12 +5,17 @@ function Navbar() {
     <>
       <div className="w-full bg-indigo-900 text-white font-semibold py-4">
         <div className="w-full max-w-screen-xl mx-auto flex justify-between items-center px-6">
-          <Link to="/home" className="hover:underline text-lg">
-            Blog Pessoal
+          <Link to="/" className="hover:underline text-lg">
+            Farmacia
           </Link>
 
           <nav className="flex gap-6 items-center text-sm">
-            Temas Cadastrar Tema Perfil
+            <Link to="/categorias" className="hover:underline">
+              Listar Categorias
+            </Link>
+            <Link to="/cadastrarcategorias" className="hover:underline">
+              Cadastrar Categoria
+            </Link>
           </nav>
         </div>
       </div>

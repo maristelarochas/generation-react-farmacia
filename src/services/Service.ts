@@ -4,16 +4,31 @@ const api = axios.create({
   baseURL: "https://farmacianest.onrender.com",
 });
 
-export const cadastrarUsuario = async (
+export const buscar = async (
   url: string,
-  dados: object,
-  setDados: Function
+  setDados: Function,
+  header: object
 ) => {
-  const resposta = await api.post(url, dados);
+  const resposta = await api.get(url, header);
   setDados(resposta.data);
 };
 
-export const login = async (url: string, dados: object, setDados: Function) => {
-  const resposta = await api.post(url, dados);
+export const cadastrar = async (
+  url: string,
+  dados: object,
+  setDados: Function,
+  header: object
+) => {
+  const resposta = await api.post(url, dados, header);
+  setDados(resposta.data);
+};
+
+export const atualizar = async (
+  url: string,
+  dados: object,
+  setDados: Function,
+  header: object
+) => {
+  const resposta = await api.post(url, dados, header);
   setDados(resposta.data);
 };
