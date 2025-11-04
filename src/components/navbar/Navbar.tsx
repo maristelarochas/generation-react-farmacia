@@ -16,6 +16,12 @@ function Navbar() {
             <Link to="/cadastrarcategorias" className="hover:underline">
               Cadastrar Categoria
             </Link>
+            <Link to="/editarcategorias" className="hover:underline">
+              Editar Categoria
+            </Link>
+            <Link to="/deletarcategorias" className="hover:underline">
+              Deletar Categoria
+            </Link>
           </nav>
         </div>
       </div>

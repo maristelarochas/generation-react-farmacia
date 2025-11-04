@@ -32,3 +32,7 @@ export const atualizar = async (
   const resposta = await api.post(url, dados, header);
   setDados(resposta.data);
 };
+
+export const deletar = async (url: string, header: object) => {
+  await api.delete(url, header);
+};
